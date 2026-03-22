@@ -1,0 +1,16 @@
+{
+  "name": "betpawa-ai-agent",
+  "version": "1.0.0",
+  "description": "Agent IA de paris football simulé — BetPawa",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

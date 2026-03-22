@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: betpawa-ai-agent
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ANTHROPIC_API_KEY
+        sync: false        # À renseigner manuellement dans Render
+      - key: ODDS_API_KEY
+        sync: false        # Clé The Odds API (gratuit 500 req/mois)
+      - key: FOOTBALL_DATA_KEY
+        sync: false        # Clé football-data.org (gratuit)
+    healthCheckPath: /health
